@@ -18,6 +18,7 @@ body {
   line-height: 26px;
   background-color: #f2f2f2;
   margin:0;
+  color: #333333;
 }
 a {
   text-decoration: none;
@@ -87,11 +88,13 @@ a {
   line-height: 36px;
   font-weight: bold;
   text-transform: uppercase;
+  color: #000;
 }
 .advantages h3, .service h3, .catalog-cards h3 {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  color:#000;
 }
 .advantages-item, .service-item, .card-price-row {
   background-color: rgba(131, 179, 211, 0.12);
@@ -103,7 +106,7 @@ a {
   background-color: rgba(131, 179, 211, 0.2);
 }
 .advantages-item.item-wide, .subscribe-btn,
-.apply-filter-btn, .pagination-item a {
+.apply-filter-btn, .add-favorite-btn, .pagination-item a {
   background-color: rgba(130, 179, 211, 1);
   color:#fff;
 }
@@ -117,6 +120,9 @@ a {
 }
 .subscribe {
   background: url(../images/subscribe-bg.jpg) no-repeat #82B3D3;
+}
+.main-index .subscribe-title, .main-index .subscribe-text,
+.item-wide h3, .item-wide p {
   color: #fff;
 }
 .subscribe-input, .price-filter input[type=number] {
@@ -191,6 +197,9 @@ a {
   text-transform: none;
   color: #000;
 }
+.away-favorite-btn {
+  background-color: #7DB54F;
+}
 .card-rating-row span {
   display: block;
   background: #F2F2F2;
@@ -219,10 +228,6 @@ a {
 }
 .subscribe.no-background {
   background: none;
-  color: #000;
-}
-.no-background .subscribe-text {
-  color:#333333;
 }
 
 .visually-hidden {

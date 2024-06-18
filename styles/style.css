@@ -20,19 +20,28 @@ body {
   margin:0;
   color: #333333;
 }
-a {
+html, body {
+  height: 100%;
+}
+.header-nav a, .footer-phone, .catalog-result a {
   text-decoration: none;
 }
-.header-links, .catalog-cards, .pagination {
+.header-nav ul, .advantages-list, .service-list,
+.socials, .breadcrumbs, .change-view-list, .catalog-cards, .pagination {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .page-wrapper {
+  flex-direction: column;
   background-color: #ffffff;
   width: 1200px;
   margin: 0 auto;
+  min-height: 100%;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+main {
+  flex-grow: 1;
 }
 .btn, .catalog-card-btn {
   font-family: inherit;
@@ -43,23 +52,35 @@ a {
   padding: 8px 50px;
   border-radius: 4px;
 }
-.header-nav, .main-footer, .header-links, .header-icons,
-.filter-form, .filter-form fieldset, .catalog-header,
-.catalog-cards, .pagination {
+.page-wrapper, .header-nav, .header-nav ul, .main-footer,
+.service-list, .filter-form, .filter-form fieldset, .filter-buttons,
+.catalog-header, .change-view-list, .catalog-cards, .pagination {
   display: flex;
+}
+.header-nav {
+  position: relative;
+  height: 64px;
+  padding: 0 70px;
+}
+.logo {
+  align-self: start;
+  margin-right: 30px;
 }
 .header-links-item a {
   font-size: 20px;
   line-height: 24px;
   font-weight: bold;
   color: #000;
+  padding: 20px 16px;
 }
 .header-links-item a.active {
   text-decoration: underline;
   text-decoration-color: #756257;
   text-decoration-thickness: 2px;
-  text-underline-offset: 20px;
-  text-underline-position: under;
+  text-underline-offset: 23px;
+}
+.header-nav .header-icons {
+  margin-left: auto;
 }
 .header-favorites-link output {
   background-color: #7DB54F;
@@ -67,6 +88,9 @@ a {
   line-height: 10px;
   color: #fff;
   border-radius: 10px;
+}
+.header-btn {
+  margin-left:20px;
 }
 .header-btn, .filter-form button,
 .catalog-card-btn, .card-rating-row {
@@ -76,12 +100,19 @@ a {
 .main-index, .subscribe.no-background {
   text-align: center;
 }
+.main-index p, .main-index h2, .main-index h3,
+.catalog-result-title, .no-background h2, .no-background p  {
+  margin: 0;
+}
 .hero {
-  background-color: #82B3D3;
+  background-color: rgba(130, 179, 211, 0.7);
   background-image: url(../images/divider.svg), url(../images/index-bg.jpg);
-  background-position: center bottom, center center;
+  background-position: center bottom -1px, center center;
   background-repeat: no-repeat;
   background-size: 100% auto, cover;
+}
+.hero img {
+  margin: 51px auto 82px;
 }
 .lead, .subscribe-title, .catalog-result-title {
   font-size: 30px;
@@ -89,6 +120,13 @@ a {
   font-weight: bold;
   text-transform: uppercase;
   color: #000;
+}
+.advantages > .lead {
+  margin-top: 69px;
+}
+.advantages > .section-text {
+  margin-top: 25px;
+  margin-bottom: 90px;
 }
 .advantages h3, .service h3, .catalog-cards h3 {
   font-size: 24px;
@@ -110,8 +148,34 @@ a {
   background-color: rgba(130, 179, 211, 1);
   color:#fff;
 }
+.service > .lead {
+  margin-top: 64px;
+}
+.service > .section-text {
+  margin-top: 20px;
+  margin-bottom: 64px;
+}
+.service-item {
+  width: 400px;
+  height: 385px;
+}
+.service-item h3 {
+  margin-top: 183px;
+}
+.service-item p {
+  margin-top: 30px;
+}
 .service-item:nth-child(2), .card-price-row {
   background-color: #fff;
+}
+.search-section, .subscribe {
+  padding: 96px;
+}
+.search-section > .lead, h2.subscribe-title {
+  margin-bottom: 20px;
+}
+.search-section > .section-text, p.subscribe-text {
+  margin-bottom: 54px;
 }
 .search-section-btn, .subscribe-btn {
   font-size: 20px;
@@ -119,7 +183,9 @@ a {
   border: none;
 }
 .subscribe {
-  background: url(../images/subscribe-bg.jpg) no-repeat #82B3D3;
+  background: url(../images/subscribe-bg.jpg) no-repeat rgba(130, 179, 211, 0.7);
+  background-size: cover;
+  padding-bottom: 104px;
 }
 .main-index .subscribe-title, .main-index .subscribe-text,
 .item-wide h3, .item-wide p {
@@ -131,6 +197,14 @@ a {
   font-size: 18px;
   line-height: 24px;
 }
+.main-footer {
+  justify-content: space-between;
+  padding: 40px 70px 30px;
+}
+.socials {
+  width: 142px;
+  background-color: rgba(130, 179, 211, 0.7);
+}
 .footer-phone {
   font-size: 40px;
   line-height: 40px;
@@ -139,12 +213,19 @@ a {
 /*---CATALOG---*/
 
 .filter {
-  background: url(../images/catalog-bg.jpg) no-repeat #82B3D3;
+  background: url(../images/catalog-bg.jpg) no-repeat rgba(130, 179, 211, 0.7);
+  background-size: cover;
   color: #fff;
+  padding: 35px 70px 70px;
 }
 .catalog-title {
+  margin: 0;
+  margin-bottom: 8px;
   font-size: 60px;
   line-height: 78px;
+}
+.breadcrumbs {
+  margin-bottom: 40px;
 }
 .breadcrumbs-item {
   font-size: 16px;
@@ -153,10 +234,22 @@ a {
 .filter-form {
   align-items: start;
 }
+.filter-form fieldset {
+  padding: 0;
+}
 .filter-form fieldset, .filter-form button, button.catalog-card-btn {
   border: none;
 }
-.infrastructure-filter, .housing-filter {
+.infrastructure-filter {
+  margin-right: 70px;
+}
+.housing-filter {
+  margin-right: auto;
+}
+.filter-buttons {
+  margin-left: 70px;
+}
+.infrastructure-filter, .housing-filter, .filter-buttons {
   flex-direction: column;
 }
 .filter-form-title {
@@ -168,16 +261,28 @@ a {
   font-size: 18px;
   line-height: 23px;
 }
+.price-filter input[type=number] {
+  font-weight: bold;
+  width: 143px;
+}
 .reset-filter-btn {
   background: none;
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
 }
+.catalog-result {
+  padding: 50px 70px 60px;
+}
+.catalog-header {
+  margin-bottom: 40px;
+}
 .catalog-header, .header-nav {
   align-items: center;
 }
 .catalog-select {
+  font-family: inherit;
+  width: 292px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   font-size: 18px;
@@ -185,15 +290,24 @@ a {
   color: #333333;
   appearance: none;
   padding: 14px 20px;
+  margin-right: 70px;
+  margin-left: auto;
 }
-.price-filter input[type=number] {
-  font-weight: bold;
+.change-view-list {
+  width: 160px;
+  height:48px;
+  background-color: #f2f2f2;
 }
 .catalog-cards {
   flex-wrap: wrap;
   gap: 20px;
+  margin-bottom: 80px;
 }
-.catalog-cards h3 {
+.catalog-card {
+  width: 300px;
+  padding: 20px;
+}
+.catalog-card h3 {
   text-transform: none;
   color: #000;
 }

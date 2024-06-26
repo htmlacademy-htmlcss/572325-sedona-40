@@ -420,6 +420,7 @@ main {
 .pagination {
   margin-top: 40px;
   gap: 8px;
+  flex-wrap: wrap;
 }
 .pagination-item a, .pagination-skip {
   display: grid;

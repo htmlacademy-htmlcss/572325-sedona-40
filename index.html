@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml">
     <link rel="stylesheet" href="styles/style.css">
     <title>Седона - Главная</title>
   </head>
@@ -28,9 +28,11 @@
             </li>
           </ul>
           <ul class="header-icons">
-            <li><a class="header-search-link" href="#">
+            <li>
+              <a class="header-search-link" href="#">
                 <span class="visually-hidden">Поиск</span>
-              </a></li>
+              </a>
+            </li>
             <li><a class="header-favorites-link" href="#">
                 <output id="favoritesValue" aria-label="Гостиниц в избранном">12</output>
               </a></li>
@@ -121,25 +123,25 @@
       <!-- FOOTER -->
       <footer class="main-footer" data-test="footer">
         <ul class="socials">
-          <li class="socials-item">
+          <li class="socials-item social-vk">
             <a href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы ВКонтакте</span>
             </a>
           </li>
-          <li class="socials-item">
+          <li class="socials-item social-tg">
             <a href="https://t.me/htmlacademy">
               <span class="visually-hidden">Мы в Телеграм</span>
             </a>
           </li>
-          <li class="socials-item">
+          <li class="socials-item social-yt">
             <a href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Мы в YouTube</span>
             </a>
           </li>
         </ul>
-        <a href="tel:+78128121212" class="footer-phone">+7 (812) 812-12-12</a>
+        <a href="tel:+78128121212" class="footer-phone" aria-label="Наш телефон">+7 (812) 812-12-12</a>
         <a href="https://htmlacademy.ru/intensive/htmlcss" class="logo-htmlacademy">
-          <img src="images/html-academy.svg" width="115" height="33" alt="Логотип HTML-Academy">
+          <span class="visually-hidden">Перейти в HTML-Academy</span>
         </a>
       </footer>
     </div>

@@ -73,9 +73,26 @@
             </fieldset>
             <fieldset class="price-filter">
               <legend class="filter-form-title">Стоимость, ₽:</legend>
-              <input type="number" name="min-price" value="0">
-              <input type="number" name="max-price" value="9000">
-              <!-- range-slider -->
+              <div class="price-inputs">
+                <label class="price-filter-label">
+                  <span>от</span>
+                  <input type="number" name="min-price" value="0" required>
+                </label>
+                <label class="price-filter-label">
+                  <span>до</span>
+                  <input type="number" name="max-price" value="9000" required>
+                </label>
+              </div>
+              <div class="range-scale">
+                <div class="range-bar" style="left: 0; width: 226px">
+                  <button type="button" class="range-toggle range-toggle-min">
+                    <span class="visually-hidden">Изменить минимальную цену</span>
+                  </button>
+                  <button type="button" class="range-toggle range-toggle-max">
+                    <span class="visually-hidden">Изменить максимальную цену</span>
+                  </button>
+                </div>
+              </div>
             </fieldset>
             <div class="filter-buttons">
               <button class="btn apply-filter-btn" type="submit">Применить</button>
@@ -120,7 +137,8 @@
                 <span class="card-hotel-price">От 4000 ₽</span>
               </div>
               <a class="catalog-card-btn" href="#">Подробнее</a>
-              <button class="catalog-card-btn add-favorite-btn" type="button" aria-label="Добавить в избранное">В избранное</button>
+              <button class="catalog-card-btn add-favorite-btn" type="button" aria-label="Добавить в избранное">В
+                избранное</button>
               <div class="card-rating-stars stars4"></div>
               <span class="card-rating-value">Рейтинг: <output class="rating-value">8,5</output></span>
             </li>
@@ -134,7 +152,8 @@
                 <span class="hotel-price">От 5000 ₽</span>
               </div>
               <a class="catalog-card-btn" href="#">Подробнее</a>
-              <button class="catalog-card-btn away-favorite-btn" type="button" aria-label="Убрать из избранного">В избранном</button>
+              <button class="catalog-card-btn away-favorite-btn" type="button" aria-label="Убрать из избранного">В
+                избранном</button>
               <div class="card-rating-stars stars4"></div>
               <span class="card-rating-value">Рейтинг: <output class="rating-value">9,2</output></span>
             </li>
@@ -148,7 +167,8 @@
                 <span class="card-hotel-price">От 2500 ₽</span>
               </div>
               <a class="catalog-card-btn" href="#">Подробнее</a>
-              <button class="catalog-card-btn add-favorite-btn" type="button" aria-label="Добавить в избранное">В избранное</button>
+              <button class="catalog-card-btn add-favorite-btn" type="button" aria-label="Добавить в избранное">В
+                избранное</button>
               <div class="card-rating-stars stars3"></div>
               <span class="card-rating-value">Рейтинг: <output class="rating-value">6,9</output></span>
             </li>
@@ -162,7 +182,8 @@
                 <span class="card-hotel-price">От 1500 ₽</span>
               </div>
               <a class="catalog-card-btn" href="#">Подробнее</a>
-              <button class="catalog-card-btn add-favorite-btn" type="button" aria-label="Добавить в избранное">В избранное</button>
+              <button class="catalog-card-btn add-favorite-btn" type="button" aria-label="Добавить в избранное">В
+                избранное</button>
               <div class="card-rating-stars stars2"></div>
               <span class="card-rating-value">Рейтинг: <output class="rating-value">5,0</output></span>
             </li>

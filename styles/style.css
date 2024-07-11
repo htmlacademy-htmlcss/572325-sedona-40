@@ -46,7 +46,7 @@ html, body {
 main {
   flex-grow: 1;
 }
-button.btn, .catalog-card-btn {
+button.btn, .catalog-card-btn, .modal-form-btn {
   cursor: pointer;
 }
 .btn, .catalog-card-btn {
@@ -157,7 +157,7 @@ button.btn, .catalog-card-btn {
   text-align: center;
 }
 .main-index p, .main-index h2, .main-index h3, .catalog-result-title,
-.catalog-card h3, .no-background h2, .no-background p  {
+.catalog-card h3, .no-background h2, .no-background p, .modal-title  {
   margin: 0;
 }
 .hero {
@@ -168,7 +168,7 @@ button.btn, .catalog-card-btn {
   background-size: 100% auto, cover;
   padding: 51px 70px 82px;
 }
-.lead, .subscribe-title, .catalog-result-title {
+.lead, .subscribe-title, .catalog-result-title, .modal-title {
   font-size: 30px;
   line-height: 36px;
   font-weight: bold;
@@ -379,7 +379,6 @@ button.btn, .catalog-card-btn {
 .logo-htmlacademy:active {
   background-color: rgba(117, 97, 87, 0.3);
 }
-
 /*---CATALOG---*/
 
 .filter {
@@ -483,10 +482,12 @@ button.btn, .catalog-card-btn {
   top: 5px;
   background-color: #3F5E72;
 }
-.filter-form-title {
+.filter-form-title, .hotel-search-form label, .modal-form-btn {
   font-size: 20px;
   line-height: 24px;
   font-weight: bold;
+}
+legend.filter-form-title {
   margin-bottom: 32px;
 }
 .filter-form label {
@@ -534,8 +535,10 @@ button.btn, .catalog-card-btn {
 }
 .range-bar {
   position: absolute;
+  width: 226px;
   height: 4px;
   background-color: #fff;
+  left: 0;
 }
 .range-toggle, .infrastructure-filter label::before, .housing-filter label::before {
   position: absolute;
@@ -752,6 +755,203 @@ button.btn, .catalog-card-btn {
 }
 .subscribe.no-background {
   background: none;
+}
+/*---MODAL---*/
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+.modal-container-close {
+  display: none;
+}
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: #ffffff;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+.modal-hotel-search {
+  width: 717px;
+}
+.modal-close-button {
+  position: absolute;
+  top: 64px;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  border: none;
+  background: url("../images/icons/close.svg") no-repeat center;
+  background-color: #F2F2F2;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.hotel-search-form {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 110px);
+  grid-template-rows: repeat(3, 48px) 60px;
+  row-gap: 48px;
+  margin-top: 64px;
+}
+.hotel-search-form input, .modal-form-btn {
+  border: none;
+}
+.hotel-search-form label {
+  align-self: center;
+  color: #000;
+  cursor: pointer;
+}
+.children-label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-self: end;
+  grid-column: 3/span 2;
+  margin-right: 46px;
+}
+.hotel-search-form input {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+.hotel-search-form input[type=text] {
+  line-height: 24px;
+  padding-inline: 20px;
+  grid-column: 2/-1;
+  background: url("../images/icons/calendar.svg") no-repeat right;
+  background-color: #f2f2f2;
+  background-position-x: 95%;
+}
+.adult-amount-box, .children-amount-box, .hotel-search-form label {
+  position: relative;
+}
+.modal-form-msg {
+  position: absolute;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: normal;
+  width: 400px;
+  left: 115%;
+  top: 40px;
+}
+.error-msg {
+  color: #FF5757;
+}
+.available-msg {
+  color: #333333;
+}
+.hotel-search-form input[type=number] {
+  line-height: 20px;
+  text-align: center;
+  width: 110px;
+  height: 48px;
+  background-color: #f2f2f2;
+}
+.hotel-search-form input[type=number]::-webkit-outer-spin-button,
+.hotel-search-form input[type=number]::-webkit-inner-spin-button {
+  appearance: none;
+}
+.modal-close-button:hover, .modal-close-button:focus,
+.hotel-search-form input:hover, .hotel-search-form input:focus {
+  background-color: #E6E6E6;
+}
+.modal-close-button:focus, .hotel-search-form input:focus {
+  outline: 3px solid #83B3D3;
+}
+.modal-close-button:active {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.3'%3E%3Cpath d='M17 4.29231L15.7077 3L10 8.70769L4.29231 3L3 4.29231L8.70769 10L3 15.7077L4.29231 17L10 11.2923L15.7077 17L17 15.7077L11.2923 10L17 4.29231Z' fill='black'/%3E%3C/g%3E%3C/svg%3E");
+}
+.amount-btn {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 14px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.amount-btn::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 48px;
+  background-color: rgba(117, 97, 87, 0.3);
+}
+.btn-down {
+  left: 5px;
+}
+.btn-up {
+  right: 5px;
+}
+.btn-down::before, .btn-up::before {
+  position: absolute;
+  top: -14px;
+  left: -5px;
+}
+.btn-down::before {
+  mask: url(../images/icons/btnminus.svg) no-repeat center;
+}
+.btn-up::before {
+  mask: url(../images/icons/btnplus.svg) no-repeat center;
+}
+.amount-btn:hover::before, .amount-btn:focus::before {
+  background-color: #000;
+}
+.amount-btn:focus {
+  outline: 3px solid #82B3D3;
+}
+.amount-btn:active::before {
+  opacity: 0.2;
+}
+.tooltip-btn  {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  background: url(../images/icons/tooltip.svg) no-repeat center;
+  background-color: #83B3D3;
+}
+.tooltip-text {
+  display: none;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  width: 256px;
+  min-height: 140px;
+  background-color: #333333;
+  padding: 15px 22px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.tooltip-btn:hover + .tooltip-text, .tooltip-btn:focus + .tooltip-text {
+  display: block;
+}
+.children-amount-box {
+  grid-column: 5;
+}
+.modal-number-inputs, .modal-form-btn {
+  grid-column: 1/-1;
+}
+.modal-form-btn {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #83B3D3;
+  border-radius: 10px;
+}
+.modal-form-btn:hover, .modal-form-btn:focus {
+  background-color: #68A2CA;
+}
+.modal-form-btn:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 .visually-hidden {
   position: absolute;

@@ -33,9 +33,11 @@
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
-            <li><a class="header-favorites-link" href="#">
+            <li>
+              <a class="header-favorites-link" href="#">
                 <output id="favoritesValue" aria-label="Гостиниц в избранном">12</output>
-              </a></li>
+              </a>
+            </li>
           </ul>
           <a href="#" class="btn header-btn">Хочу сюда!</a>
         </nav>
@@ -107,8 +109,10 @@
         <section class="search-section" data-test="search">
           <h2 class="visually-hidden">Поиск гостиниицы по датам</h2>
           <p class="lead">Заинтересовались?</p>
-          <p class="section-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <button type="button" class="btn search-section-btn" id="searchBtn" onclick="modalSearch.classList.remove('modal-container-close')">Поиск гостиницы в седоне</button>
+          <p class="section-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в
+            Седоне</p>
+          <button type="button" class="btn search-section-btn" id="searchBtn"
+            onclick="modalSearch.classList.remove('modal-container-close')">Поиск гостиницы в седоне</button>
         </section>
         <section class="subscribe" data-test="subscribe">
           <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
@@ -146,7 +150,7 @@
     </div>
     <div class="modal-container modal-container-close" id="modalSearch">
       <div class="modal modal-hotel-search">
-        <button class="modal-close-button" onclick="modalSearch.classList.add('modal-container-close')"">
+        <button class="modal-close-button" onclick="modalSearch.classList.add('modal-container-close')">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <section class="modal-content">
@@ -155,26 +159,37 @@
             <label for="date-arrive">Дата Заезда:
               <strong class="modal-form-msg error-msg">Мы не можем отправить вас в прошлое.</strong>
             </label>
-            <input type="text" id="date-arrive" name="date-arrive" value="27 апреля 2020" placeholder="Укажите дату" required>
+            <input type="text" id="date-arrive" name="date-arrive" value="27 апреля 2020" placeholder="Укажите дату"
+              required>
             <label for="date-depart">Дата Выезда:
               <strong class="modal-form-msg available-msg">На эти даты есть свободные номера. Пока есть.</strong>
             </label>
-            <input type="text" id="date-depart" name="date-depart" value="1 сентября 2024" placeholder="Укажите дату" required>
+            <input type="text" id="date-depart" name="date-depart" value="1 сентября 2024" placeholder="Укажите дату"
+              required>
             <label for="adultAmount">Взрослые:</label>
             <div class="adult-amount-box">
-              <button type="button" class="amount-btn btn-down" onclick="adultAmount.stepDown()"></button>
+              <button type="button" class="amount-btn btn-down" onclick="adultAmount.stepDown()">
+                <span class="visually-hidden">Уменьшить количество взрослых</span>
+              </button>
               <input type="number" id="adultAmount" name="adult-amount" value="2" min="0" max="50" required>
-              <button type="button" class="amount-btn btn-up" onclick="adultAmount.stepUp()"></button>
+              <button type="button" class="amount-btn btn-up" onclick="adultAmount.stepUp()">
+                <span class="visually-hidden">Добавить количество взрослых</span>
+              </button>
             </div>
-            <div class="children-label">
+            <div class="children-label-box">
               <label for="childrenAmount">Дети:</label>
-              <button type="button" class="tooltip-btn"></button>
-              <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              <button type="button" class="tooltip-btn" aria-labelledby="tooltip-children"></button>
+              <span class="tooltip-text" role="tooltip" id="tooltip-children">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
+                Дети до 6 лет размещаются бесплатно.</span>
             </div>
             <div class="children-amount-box">
-              <button type="button" class="amount-btn btn-down" onclick="childrenAmount.stepDown()"></button>
+              <button type="button" class="amount-btn btn-down" onclick="childrenAmount.stepDown()">
+                <span class="visually-hidden">Уменьшить количество детей</span>
+              </button>
               <input type="number" id="childrenAmount" name="children-amount" value="2" min="0" max="50" required>
-              <button type="button" class="amount-btn btn-up" onclick="childrenAmount.stepUp()"></button>
+              <button type="button" class="amount-btn btn-up" onclick="childrenAmount.stepUp()">
+                <span class="visually-hidden">Добавить количество детей</span>
+              </button>
             </div>
             <button class="modal-form-btn" type="submit">Найти</button>
           </form>

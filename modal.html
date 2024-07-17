@@ -85,43 +85,6 @@
             </li>
           </ul>
         </section>
-        <section class="service">
-          <div class="service-top">
-            <h2 class="visually-hidden">Сервис</h2>
-            <p class="lead">Приезжайте в Седону отдохнуть<br>в комфорте и уюте!</p>
-            <p class="section-text">Опытный персонал и качественное обслуживание!</p>
-          </div>
-          <ul class="service-list">
-            <li class="service-item">
-              <h3>Жильё</h3>
-              <p>Рекомендуем пожить<br>в настоящем мотеле,<br>всё как в кино!</p>
-            </li>
-            <li class="service-item">
-              <h3>Еда</h3>
-              <p>Всегда заказывайте<br>топовый фирменный бургер,<br>вы не разочаруетесь!</p>
-            </li>
-            <li class="service-item">
-              <h3>Сувениры</h3>
-              <p>Не только китайского,<br>но и настоящего местного<br>производства!</p>
-            </li>
-          </ul>
-        </section>
-        <section class="search-section" data-test="search">
-          <h2 class="visually-hidden">Поиск гостиниицы по датам</h2>
-          <p class="lead">Заинтересовались?</p>
-          <p class="section-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в
-            Седоне</p>
-          <button type="button" class="btn search-section-btn" id="searchBtn"
-            onclick="modalSearch.classList.remove('modal-container-close')">Поиск гостиницы в седоне</button>
-        </section>
-        <section class="subscribe" data-test="subscribe">
-          <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-          <p class="subscribe-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
-          <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="subscribe-input" type="email" name="email" placeholder="Ваш e-mail" required>
-            <button class="btn subscribe-btn" type="submit">Подписаться</button>
-          </form>
-        </section>
       </main>
       <!-- FOOTER -->
       <footer class="main-footer" data-test="footer">
@@ -150,8 +113,8 @@
         </a>
       </footer>
     </div>
-    <div class="modal-container modal-container-close" id="modalSearch">
-      <div class="modal modal-hotel-search">
+    <div class="modal-container" id="modalSearch">
+      <div class="modal modal-hotel-search" data-test="modal">
         <button class="modal-close-button" onclick="modalSearch.classList.add('modal-container-close')">
           <span class="visually-hidden">Закрыть</span>
         </button>

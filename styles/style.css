@@ -80,12 +80,12 @@ button.btn, .catalog-card-btn, .modal-form-btn {
   padding: 0 70px;
 }
 .logo {
-  margin-right: 30px;
+  margin-right: 29px;
   margin-bottom: -6px;
 }
 .logo > img, .hero img, .catalog-card img {
   display: block;
-  transition: filter 0.3s ease;
+  transition: filter 0.2s ease;
 }
 .logo[href] img:hover, .logo[href] img:focus {
   filter: drop-shadow(0 0 15px #83B3D3);
@@ -233,7 +233,7 @@ button.btn, .catalog-card-btn, .modal-form-btn {
 }
 .advantages-item-info {
   display: grid;
-  padding: 112px 85px;
+  padding: 112px 84px;
   justify-items: center;
   align-content: space-between;
 }
@@ -484,7 +484,7 @@ button.btn, .catalog-card-btn, .modal-form-btn {
 .infrastructure-filter label::before {
   content: "";
   border-radius: 4px;
-  left: 2px;
+  left: 0;
 }
 .infrastructure-filter label:has(input:checked)::before {
   background: url(../images/icons/tick.svg) no-repeat center;
@@ -498,7 +498,7 @@ button.btn, .catalog-card-btn, .modal-form-btn {
 .housing-filter label::before {
   content: "";
   border-radius: 50%;
-  left: 2px;
+  left: 1px;
 }
 .housing-filter label:has(input:checked)::after {
   content: "";
@@ -532,6 +532,9 @@ legend.filter-form-title {
 .price-filter input[type=number]::-webkit-outer-spin-button,
 .price-filter input[type=number]::-webkit-inner-spin-button {
   appearance: none;
+}
+.price-filter input[type=number] {
+  -moz-appearance: textfield;
 }
 :is(.price-filter input[type=number], .subscribe-input):hover, :is(.price-filter input[type=number], .subscribe-input):focus {
   background-color: #E6E6E6;
@@ -618,9 +621,7 @@ legend.filter-form-title {
   padding: 50px 70px 60px;
 }
 .catalog-header {
-  margin-bottom: 36px;
-}
-.catalog-header {
+  margin-bottom: 39px;
   align-items: center;
 }
 .catalog-select {
@@ -638,6 +639,7 @@ legend.filter-form-title {
   background-image: url("../images/icons/selectarrow.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
+  background-color: #fff;
 }
 .catalog-select:hover, .catalog-select:focus {
   border-color: #68A2CA;
@@ -692,7 +694,7 @@ legend.filter-form-title {
   gap: 16px 20px;
   width: 340px;
   padding: 20px;
-  border: 1px solid #E6E6E6;
+  outline: 1px solid #E6E6E6;
   border-radius: 4px;
 }
 .card-top-link, .card-price-row {
@@ -834,7 +836,7 @@ legend.filter-form-title {
 }
 .hotel-search-form {
   display: grid;
-  grid-template-rows: auto-fit(minmax(48px, auto));
+  grid-template-rows: repeat(auto-fit, minmax(48px, auto));
   row-gap: 48px;
   margin-top: 64px;
 }
@@ -903,6 +905,9 @@ legend.filter-form-title {
 .hotel-search-form input[type=number]::-webkit-outer-spin-button,
 .hotel-search-form input[type=number]::-webkit-inner-spin-button {
   appearance: none;
+}
+.hotel-search-form input[type=number] {
+  -moz-appearance: textfield;
 }
 .modal-close-button:hover, .modal-close-button:focus,
 .hotel-search-form input:hover, .hotel-search-form input:focus {
@@ -981,9 +986,9 @@ legend.filter-form-title {
   text-align: left;
   width: 256px;
   top: 40px;
-  left: -114px;
+  left: -116px;
   background-color: #333333;
-  padding: 22px;
+  padding: 22px 21px;
   border-radius: 10px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   z-index: 1;

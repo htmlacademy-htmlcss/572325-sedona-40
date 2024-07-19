@@ -44,7 +44,7 @@ html, body {
   min-height: 100%;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-main {
+.main-index, .catalog {
   flex-grow: 1;
 }
 button.btn, .catalog-card-btn, .modal-form-btn {

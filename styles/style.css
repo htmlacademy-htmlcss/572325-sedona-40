@@ -541,7 +541,8 @@ legend.filter-form-title {
 .price-filter input[type=number] {
   -moz-appearance: textfield;
 }
-:is(.price-filter input[type=number], .subscribe-input):hover, :is(.price-filter input[type=number], .subscribe-input):focus {
+:is(.price-filter input[type=number], .subscribe-input):hover,
+:is(.price-filter input[type=number], .subscribe-input):focus {
   background-color: #E6E6E6;
 }
 :is(.price-filter input[type=number], .subscribe-input):focus {
@@ -781,12 +782,14 @@ legend.filter-form-title {
   font-weight: bold;
   border-radius: 4px;
 }
-:is(.pagination-item a:not(.pagination-current-page), .subscribe-btn:not(:disabled), .apply-filter-btn:not(:disabled), .add-favorite-btn):hover,
+:is(.pagination-item a:not(.pagination-current-page), .subscribe-btn:not(:disabled),
+.apply-filter-btn:not(:disabled), .add-favorite-btn):hover,
 :is(.pagination-item a, .subscribe-btn, .apply-filter-btn, .add-favorite-btn):focus {
   background-color: #68A2CA;
   outline: none;
 }
-:is(.pagination-item a:not(.pagination-current-page), .subscribe-btn, .apply-filter-btn, .add-favorite-btn):active {
+:is(.pagination-item a:not(.pagination-current-page), .subscribe-btn,
+.apply-filter-btn, .add-favorite-btn):active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #82B3D3;
 }

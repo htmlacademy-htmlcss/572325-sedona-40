@@ -472,7 +472,7 @@ button.btn, .catalog-card-btn, .modal-form-btn {
   position: relative;
   padding-left: 36px;
 }
-:is(.infrastructure-filter, .housing-filter) label:hover {
+:is(.infrastructure-filter, .housing-filter) label:has(input:not(:disabled)):hover {
   opacity: 0.6;
 }
 :is(.infrastructure-filter, .housing-filter) label:focus {
@@ -506,9 +506,14 @@ button.btn, .catalog-card-btn, .modal-form-btn {
   border-radius: 50%;
   width: 10px;
   height: 10px;
-  left: 7px;
+  left: 6px;
   top: 5px;
   background-color: #3F5E72;
+}
+.infrastructure-filter label:has(input:disabled),
+.housing-filter label:has(input:disabled) {
+  opacity: 0.2;
+  pointer-events: none;
 }
 .filter-form-title, .hotel-search-form label, .modal-form-btn {
   font-size: 20px;
@@ -621,7 +626,7 @@ legend.filter-form-title {
   padding: 50px 70px 60px;
 }
 .catalog-header {
-  margin-bottom: 39px;
+  margin-bottom: 40px;
   align-items: center;
 }
 .catalog-select {

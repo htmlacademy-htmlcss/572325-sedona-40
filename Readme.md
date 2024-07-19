@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Леонид Козинский](https://up.htmlacademy.ru/htmlcss/40/user/572325).
-* Наставник: `Неизвестно`.
+* Наставник: [Дина Шарипова](https://htmlacademy.ru/profile/id1418957).
+* Веб-сайт: [Проект "Седона"](https://lonelypactyx.github.io/572325-sedona-40/)
 
 ---
 

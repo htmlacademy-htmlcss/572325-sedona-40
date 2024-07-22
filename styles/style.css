@@ -474,7 +474,7 @@ button.btn, .catalog-card-btn, .modal-form-btn {
   position: relative;
   padding-left: 36px;
 }
-:is(.infrastructure-filter, .housing-filter) label:has(input):hover {
+:is(.infrastructure-filter, .housing-filter) label:has(input:hover) {
   opacity: 0.6;
 }
 :is(.infrastructure-filter, .housing-filter) label:focus {

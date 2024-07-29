@@ -16,7 +16,7 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   margin:0;
   padding-inline: 40px;
   color: #333333;
@@ -38,7 +38,7 @@ html, body {
 }
 .page-wrapper {
   flex-direction: column;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   width: 1200px;
   margin: 0 auto;
   min-height: 100%;
@@ -55,7 +55,7 @@ button.btn, .catalog-card-btn, .modal-form-btn {
   background-color: #756157;
   font-weight: bold;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 8px 50px;
   border-radius: 4px;
   text-align: center;
@@ -69,12 +69,31 @@ button.btn, .catalog-card-btn, .modal-form-btn {
   color: rgba(255, 255, 255, 0.3);
   background-color: #756157;
 }
-.page-wrapper, .header-nav, .header-nav ul, .header-icons li, .main-footer,
-.advantages-item-wide, .service-list, .subscribe-form, .socials, .filter-form,
-.filter-form fieldset, .price-inputs, .filter-buttons, .catalog-header,
-.toggle-view-list, .catalog-cards, .pagination {
+
+
+
+.page-wrapper,
+.header-nav,
+.header-nav ul,
+.header-icons li,
+.main-footer,
+.advantages-item-wide,
+.service-list,
+.subscribe-form,
+.socials,
+.filter-form,
+.filter-form fieldset,
+.price-inputs,
+.filter-buttons,
+.catalog-header,
+.toggle-view-list,
+.catalog-cards,
+.pagination {
   display: flex;
 }
+
+
+
 .header-nav {
   position: relative;
   padding: 0 70px;
@@ -154,7 +173,7 @@ button.btn, .catalog-card-btn, .modal-form-btn {
   padding: 3px;
   font-size: 10px;
   line-height: 10px;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 10px;
 }
 .header-btn {
@@ -221,7 +240,7 @@ button.btn, .catalog-card-btn, .modal-form-btn {
 .advantages-item-wide, .subscribe-btn,
 .apply-filter-btn, .add-favorite-btn, .pagination-item a {
   background-color: rgba(130, 179, 211, 1);
-  color:#FFFFFF;
+  color:#ffffff;
 }
 .advantages-item-wide > img {
   object-fit: cover;
@@ -295,7 +314,7 @@ button.btn, .catalog-card-btn, .modal-form-btn {
   margin-block: 30px;
 }
 .service-item:nth-child(2), .card-price-row {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 .search-section, .subscribe {
   padding: 96px 70px;
@@ -318,14 +337,14 @@ button.btn, .catalog-card-btn, .modal-form-btn {
 }
 .main-index .subscribe-title, .main-index .subscribe-text,
 .advantages-item-wide h3 {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .subscribe-form {
   justify-content: center;
 }
 .subscribe-input, .price-filter input[type="number"] {
   font-family: inherit;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   font-size: 18px;
   line-height: 24px;
 }
@@ -410,7 +429,7 @@ button.btn, .catalog-card-btn, .modal-form-btn {
 .filter {
   background: url("../images/catalog-bg.jpg") no-repeat rgba(130, 179, 211, 0.7);
   background-size: cover;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 35px 70px 73px;
 }
 .catalog-title {
@@ -490,7 +509,7 @@ button.btn, .catalog-card-btn, .modal-form-btn {
 }
 .infrastructure-filter label:has(input:checked)::before {
   background: url("../images/icons/tick.svg") no-repeat center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 .infrastructure-filter label:has(input:focus)::before,
 .infrastructure-filter label:has(input:checked:focus)::before,
@@ -577,14 +596,14 @@ legend.filter-form-title {
   position: absolute;
   width: 226px;
   height: 4px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   left: 0;
 }
 .range-toggle, .infrastructure-filter label::before, .housing-filter label::before {
   position: absolute;
   width: 20px;
   height: 20px;
-  background: #FFFFFF;
+  background: #ffffff;
   cursor: pointer;
 }
 .range-toggle {
@@ -614,7 +633,7 @@ legend.filter-form-title {
   background: none;
   font-weight: bold;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .reset-filter-btn:not(:disabled):hover {
   opacity: 0.6;
@@ -640,7 +659,7 @@ legend.filter-form-title {
 .catalog-select {
   font-family: inherit;
   min-width: 292px;
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
   font-size: 18px;
   line-height: 21px;
@@ -652,7 +671,7 @@ legend.filter-form-title {
   background-image: url("../images/icons/selectarrow.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 .catalog-select:hover, .catalog-select:focus {
   border-color: #68A2CA;
@@ -676,7 +695,7 @@ legend.filter-form-title {
   height:48px;
   background: url("../images/icons/toggleview.svg") no-repeat center;
   background-clip: content-box;
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
 }
 .toggle-view-item a:focus {
@@ -767,7 +786,7 @@ legend.filter-form-title {
   display: block;
   padding:  10px 8px 6px;
   text-align: center;
-  background: #F2F2F2;
+  background: #f2f2f2;
   text-transform: uppercase;
   color: #333333;
   border-radius: 4px;
@@ -802,11 +821,11 @@ legend.filter-form-title {
   background-color: #82B3D3;
 }
 :is(.apply-filter-btn, .subscribe-btn):disabled {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   cursor: not-allowed;
 }
 .pagination-item .pagination-current-page  {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   color: #000000;
 }
 .subscribe.no-background {
@@ -831,7 +850,7 @@ legend.filter-form-title {
   position: relative;
   margin: auto;
   padding: 64px 70px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
 }
@@ -846,7 +865,7 @@ legend.filter-form-title {
   height: 52px;
   border: none;
   background: url("../images/icons/close.svg") no-repeat center;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -881,7 +900,7 @@ legend.filter-form-title {
   line-height: 24px;
   padding-inline: 20px;
   background: url("../images/icons/calendar.svg") no-repeat right;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   background-position-x: 95%;
 }
 .adult-amount-box, .children-amount-box, .date-input-box {
@@ -916,7 +935,7 @@ legend.filter-form-title {
   width: 110px;
   height: 100%;
   margin-left: 46px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 .hotel-search-form input[type="number"]::-webkit-outer-spin-button,
 .hotel-search-form input[type="number"]::-webkit-inner-spin-button {
@@ -996,7 +1015,7 @@ legend.filter-form-title {
 .tooltip-text {
   position: absolute;
   display: none;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   text-align: left;
@@ -1024,7 +1043,7 @@ legend.filter-form-title {
   font-family: inherit;
 }
 .modal-form-btn {
-  color: #FFFFFF;
+  color: #ffffff;
   text-transform: uppercase;
   background-color: #83B3D3;
   border-radius: 10px;
@@ -1038,7 +1057,7 @@ legend.filter-form-title {
   color: rgba(255, 255, 255, 0.3);
 }
 .modal-form-btn:disabled {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   cursor: not-allowed;
 }
 .visually-hidden {
